@@ -1,10 +1,22 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>octopoup</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐙</text></svg>">
+  <style>
+    html, body { margin: 0; height: 100%; overflow: hidden; background: radial-gradient(ellipse at 50% 15%, #12505f, #031119 70%); }
+    canvas { display: block; cursor: none; touch-action: none; }
+  </style>
+  <script type="importmap">
+    { "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+    } }
+  </script>
 </head>
 <body>
+  <script type="module" src="main.js"></script>
 </body>
 </html>
