@@ -200,7 +200,10 @@ addEventListener('pointermove', (e) => {
 }, { passive: true });
 addEventListener('pointerdown', (e) => {
   pointer = [e.clientX, e.clientY];
-  light = [e.clientX, e.clientY];
+  // a mouse already drags the light along; only a fresh touch far away needs it to jump
+  if (e.pointerType !== 'mouse' && Math.hypot(light[0] - e.clientX, light[1] - e.clientY) > 3 * R) {
+    light = [e.clientX, e.clientY];
+  }
   lastInput = timeNow;
   if (hitsOcto(e.clientX, e.clientY)) startle();
   else blowBubbles(e.clientX, e.clientY, 7);
